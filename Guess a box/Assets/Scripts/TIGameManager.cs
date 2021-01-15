@@ -8,6 +8,11 @@ public class TIGameManager : MonoBehaviour
     int smallGold = 0;
     int noGold = 0;
 
+    //Update values in Unity
+    public int largeGoldMin, largeGoldMax;
+    public int mediumGoldMin, mediumGoldMax;
+    public int smallGoldMin, smallGoldMax;
+
     public static int totalGold = 0;
 
     // Start is called before the first frame update
@@ -18,9 +23,9 @@ public class TIGameManager : MonoBehaviour
 
     public void UpdateGoldValues()
     {
-        largeGold = Random.Range(601, 1000);
-        mediumGold = Random.Range(301, 600);
-        smallGold = Random.Range(1, 300);
+        largeGold = Random.Range(largeGoldMin, largeGoldMax);
+        mediumGold = Random.Range(mediumGoldMin, mediumGoldMax);
+        smallGold = Random.Range(smallGoldMin, smallGoldMax);
         noGold = 0;
     }
 
